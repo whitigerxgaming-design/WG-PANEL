@@ -1,0 +1,21 @@
+/* WG PANEL base theme. Admin colours are overridden by colors.css */
+:root{--wg-accent:#38bdf8;--wg-bg:#0b1020;--wg-panel:#121a2f;--wg-text:#e6edf7}
+body{background:radial-gradient(1200px 700px at 80% -10%,color-mix(in srgb,var(--wg-accent) 18%,transparent),transparent),var(--wg-bg)!important;color:var(--wg-text)}
+a{color:var(--wg-accent)}
+input:focus,textarea:focus,select:focus{border-color:var(--wg-accent)!important;box-shadow:0 0 0 3px color-mix(in srgb,var(--wg-accent) 30%,transparent)!important;outline:none}
+button[type=submit],.btn-primary{background:var(--wg-accent)!important;border-color:var(--wg-accent)!important;color:#04121c!important;font-weight:600;border-radius:8px}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--wg-accent) 45%,#222);border-radius:8px}
+/* admin area (AdminLTE) */
+.skin-blue .main-header .navbar,.skin-blue .main-header .logo{background:var(--wg-panel)!important;border-bottom:1px solid var(--wg-accent)}
+.skin-blue .main-sidebar,.content-wrapper{background:var(--wg-bg)!important}
+.skin-blue .sidebar-menu>li.active>a{border-left-color:var(--wg-accent)!important}
+.box{background:var(--wg-panel);border-top-color:var(--wg-accent);color:var(--wg-text)}
+/* login page: tiger on the left, form on the right */
+.wg-tiger{display:none}
+body.wg-login .wg-tiger{display:block;position:fixed;left:0;top:0;width:55vw;height:100vh;object-fit:cover;z-index:0;opacity:.95;
+ -webkit-mask-image:linear-gradient(90deg,#000 55%,transparent);mask-image:linear-gradient(90deg,#000 55%,transparent)}
+body.wg-login form{position:relative;z-index:2}
+body.wg-login #app{position:relative;z-index:2}
+.wg-register{display:block;text-align:center;margin-top:18px;font-size:14px}
+.wg-brand{position:fixed;left:24px;bottom:20px;z-index:3;font-weight:800;letter-spacing:.2em;font-size:22px;color:#fff;text-shadow:0 2px 12px #000}
+@media(max-width:800px){body.wg-login .wg-tiger{width:100vw;opacity:.35;-webkit-mask-image:none;mask-image:none}}
